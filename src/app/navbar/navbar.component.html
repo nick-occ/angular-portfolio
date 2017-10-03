@@ -1,0 +1,60 @@
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" [routerLink]="['/home']">Nicholas Occhipinti Portfolio</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li>
+                    <a [routerLink]="['/gis']">
+                        <span class='glyphicon glyphicon-globe'></span> GIS
+                    </a>
+                </li>
+                <li>
+                    <a [routerLink]="['/python']">
+                        <span class='glyphicon glyphicon-console'></span> Python
+                    </a>
+                </li>
+                <li>
+                    <a [routerLink]="['/webdev']">
+                        <span class='glyphicon glyphicon-cloud'></span> Web Development
+                    </a>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a class="social-link" href="https://www.linkedin.com/in/nicholas-occhipinti-46419067/" target="blank">
+                        <img class="glyphicon social-img" src="../../assets/glyphicons/glyphicons-social-18-linked-in.png"/><span> LinkedIn</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="social-link" href="https://github.com/nick-occ" target="blank">
+                        <img class="glyphicon social-img" src="../../assets/glyphicons/glyphicons-social-22-github.png"/><span> GitHub</span>
+                    </a>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class='glyphicon glyphicon glyphicon-list-alt'></span> Resume <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="./assets/doc/resume.docx" download="resume">Word</a></li>
+                        <li><a href="./assets/doc/resume.pdf" download="resume">PDF</a></li>
+                        
+                    </ul>
+                </li>
+                <li>
+                    <a class="social-link" href="https://github.com/nick-occ" target="blank">
+                        <span class='glyphicon glyphicon-info-sign'></span> About
+                    </a>
+                </li>
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav>

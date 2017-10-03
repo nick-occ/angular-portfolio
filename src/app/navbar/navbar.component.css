@@ -1,0 +1,8 @@
+.social-img {
+    background-color: gray;
+    margin-top:-5px;
+}
+
+.social-link:hover > .social-img {
+    background-color: white;
+}

@@ -1,0 +1,103 @@
+<header>
+	<h2 class='text-center' style='color:white;'>Nicholas Occhipinti Portfolio</h2>
+</header>
+<div id="home" class="container-fluid">
+  <div class="row-fluid" style="margin-top:25px;">
+      <div class="panel col-sm-12 col-md-5 col-md-push-1"  id="aboutme-panel">
+        <div class="panel-heading panel-info" >
+         <label><b>About Me</b></label>
+     	</div>
+	     <div class="panel-body">
+	     	<h3>Summary</h3>
+	         <div *ngFor='let item of aboutMeSummary.split("\n")'>
+	             <p class='text-info'>{{item}}</p>
+	         </div>
+	         <h3>Career</h3>
+	         <div *ngFor='let item of aboutMeCareer.split("\n")'>
+	             <p class='text-info'>{{item}}</p>
+	         </div>
+	         <h3>Education</h3>
+	         <ul *ngFor='let item of aboutMeEducation'>
+	             <li><a href='{{item.url}}' target='blank'>{{item.title}}</a></li>
+	         </ul>
+	     </div>   
+  		</div>
+	</div>
+  
+  
+  <div class="row-fluid" style="margin-top:25px;">
+      <div class="panel col-sm-12 col-md-4 col-md-push-2"  id="carousel-panel">
+        <div class="panel-heading panel-info text-center" >
+         <label><b>Projects</b></label>
+     	</div>  
+     	<div class="panel-body">
+     		<div id="myCarousel" class="carousel slide" data-ride="carousel">
+     			<ol class="carousel-indicators">
+    				<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    				<li data-target="#myCarousel" data-slide-to="1"></li>
+    				<li data-target="#myCarousel" data-slide-to="2"></li>
+  				</ol>
+  				
+  				<div class="carousel-inner">
+    				<div class="item active">
+    					<a [routerLink]="['/gis']">
+	      					<img src="/../../assets/img/globe_600_300.jpg" alt="GIS">
+	      						<div class="carousel-caption">
+	        						<h3>GIS</h3>
+	      						</div>
+     					</a>
+   					</div>
+   					<div class="item">
+   						<a [routerLink]="['/python']">
+	      					<img src="/../../assets/img/python_600_300.jpg" alt="Python">
+	      						<div class="carousel-caption">
+	        						<h3>Python</h3>
+	      						</div>
+	      				</a>
+   					</div>
+   					<div class="item">
+   						<a [routerLink]="['/webdev']">
+ 	      					<img src="/../../assets/img/web-dev_600_300.jpg" alt="Web Development">
+	      						<div class="carousel-caption">
+	        						<h3>Web Development</h3>
+	      						</div>
+	      				</a>
+   					</div>
+   				</div>
+   				
+   				<!-- Left and right controls -->
+			    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+			      <span class="glyphicon glyphicon-chevron-left"></span>
+			      <span class="sr-only">Previous</span>
+			    </a>
+			    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+			      <span class="glyphicon glyphicon-chevron-right"></span>
+			      <span class="sr-only">Next</span>
+			    </a>
+     		</div>
+     	</div>  
+  	  </div>
+  </div>
+	
+	
+  <div class="row-fluid" style="margin-top:25px;">
+      <div class="panel col-sm-12 col-md-4 col-md-push-2" id="carousel-panel">
+        <div class="panel-heading panel-info text-center" >
+         <label><b>Information</b></label>
+     	</div>  
+     	<div class="panel-body text-center">
+     		<app-map></app-map>
+     	</div>  
+  	  </div>
+  </div>
+
+	
+</div>
+
+<footer>
+	<div class='row-fluid'>
+		<label style='color:white;' class="col-xs-4 text-right">Email: nicholasocchipinti@gmail.com</label>
+		<label style='color:white;' class="col-xs-4 text-center">Mobile: (908)-764-2690</label>
+		<label style='color:white;' class="col-xs-4 text-left">Location: Matthews, North Carolina 28105</label>
+	</div>
+</footer>

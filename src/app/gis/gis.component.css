@@ -1,0 +1,47 @@
+
+.gis-proj-img {
+    height: 300px;
+    border: 1px solid red;
+    width: 100%;
+}
+
+.gis-proj-img:hover {
+    border: 1px solid white;
+}
+
+
+.panel {
+    border-color: black;
+}
+
+.panel-body {
+    margin-bottom: 15px;
+    border-color: black;
+    border: 1px;
+    border-style: solid;
+}
+
+.panel-heading > label {
+    margin-left: -15px;
+}
+
+#project-title {
+	background-color:#FFFF00;
+	color:red;
+	display:inline-block;
+	font-weight:bold;
+	padding:10px;
+	font-style:italic;
+}
+
+.skills {
+    margin: 5px;
+    width: 100%;
+}
+
+.work-title {
+    font-weight: bold;
+    color: red;
+    text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+}
+

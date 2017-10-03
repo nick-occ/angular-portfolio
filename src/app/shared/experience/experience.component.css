@@ -1,0 +1,10 @@
+.panel-body {
+    margin-bottom: 15px;
+    border-color: black;
+    border: 1px;
+    border-style: solid;
+}
+
+.panel-heading > label {
+    margin-left: -15px;
+}

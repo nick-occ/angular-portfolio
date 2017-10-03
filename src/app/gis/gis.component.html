@@ -1,0 +1,81 @@
+<div id="gis" class="container-fluid">
+    <div class="row" style="margin-top:25px;">
+        <div class="panel col-xs-12 col-sm-5 col-sm-push-1">
+        	<div class="panel-heading panel-info" >
+     			<label><b>Experience</b></label>
+			 </div>
+			 <div class="panel-body">
+			     <p>
+			         {{experience}}
+			     </p>
+			 </div>
+        </div>
+
+        <div class="panel col-xs-12 col-sm-4 col-sm-push-2">
+            <div class="panel-heading panel-info">
+                <label><b>Technology</b></label>
+            </div>
+            <div class="panel-body">
+                <div class="row-fluid skills">
+                    <div class="col-sm-12 col-md-4">
+                        <h5 class="text-info">Software</h5>
+                        <ul>
+                            <li>ArcGIS Desktop</li>
+                            <li>ArcGIS Server</li>
+                            <li>ArcSDE</li>
+                            <li>GeoServer</li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-12 col-md-4">
+                        <h5 class="text-info">Libraries</h5>
+                        <ul>
+                            <li>ArcGIS JavaScript API</li>
+                            <li>Leaflet</li>
+                            <li>OpenLayers</li>
+                            <li>ArcPy</li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-12 col-md-4">
+                        <h5 class="text-info">Databases</h5>
+                        <ul>
+                            <li>Oracle</li>
+                            <li>SQL Server</li>
+                            <li>PostgreSQL</li>
+                            <li>PostGIS</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <div class='row text-center'>
+	    <h3 id='project-title'>
+			PROJECTS
+		</h3>
+    </div>
+    
+    <div class="row-fluid">
+        <article *ngFor="let project of projects" class="project col-xs-12 col-sm-4">
+        <popover-content #projectPopover 
+                title="Project Information"
+                placement="auto top"
+                [animation]="true" 
+                [closeOnClickOutside]="true" >
+			    <p>{{project.project_desc}}</p>
+		</popover-content>
+	        <button [popover]="projectPopover" class='btn btn-primary pull-right' data-toggle="popover" data-placement="top" data-content="Content">
+		        <span (click)="infoClick(project.project_name)" class="glyphicon glyphicon-info-sign pull-right" style="color:white;position:relative;"></span>
+	        </button>
+	        <a href='{{project.link_path}}' title='Project Info' data-toggle="popover" data-placement="top" data-content="Content">
+                <span><img class='gis-proj-img' src='{{project.image_path}}' /></span>
+            </a>
+            <h4 class="work-title text-center">{{project.project_title}}</h4>
+        </article>
+    </div>
+</div>
+
+<footer>
+	<h3>Nicholas Occhipinti</h3>
+</footer>
